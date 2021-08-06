@@ -10,6 +10,13 @@ $soma = 0;
 
 somar($x, $y, $soma);
 
-echo $soma;
+echo $soma ."<br/>";
+
+$lista = [5, 2, 7];
+
+//função sort altera os elementos do array em ordem crescente
+sort($lista);
+
+print_r($lista);
 
 
