@@ -1,0 +1,15 @@
+<?php
+
+function somar($n1, $n2=0, $n3=0) {
+    $total = $n1 + $n2 + $n3;
+    return $total;
+}
+
+// $resultado = somar(2, 2);
+// echo $resultado ."<br/>";
+
+$x = somar(1);
+$y = somar(2, 3, 1);
+$w = somar($x, $y);
+
+echo $w;
