@@ -1,4 +1,5 @@
 <?php
+// Aplicação de funções matematicas nativas
 $num = -8.4;
 // abs() => função para transformar um numero para bsoluto.
 echo abs($num)."<br/>";
