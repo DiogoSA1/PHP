@@ -1,4 +1,6 @@
 <?php
+// Definindo uma Arrow function
+
 // $dizimo = function($valor){
 //     return $valor * 0.1;
 // };
