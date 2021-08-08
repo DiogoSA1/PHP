@@ -1,5 +1,5 @@
 <?php
-
+// Atribuindo parametros por Referencia ou Valor para uma função
 function somar($n1, $n2, &$total) {
     $total = $n1 + $n2;
 }
