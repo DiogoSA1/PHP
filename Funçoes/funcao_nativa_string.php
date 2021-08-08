@@ -1,4 +1,5 @@
 <?php
+// Manipulando strings com funções nativas
 $nomeSujo = '    Diogo    ';
 $nome = 'Diogo Albuquerque';
 
