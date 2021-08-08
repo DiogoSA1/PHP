@@ -1,5 +1,5 @@
 <?php 
-
+// Definição de função Recursiva
 function dividir($numero) {
     $metade = $numero / 2;
     echo $metade."<br/>";
