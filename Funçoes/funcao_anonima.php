@@ -1,4 +1,5 @@
 <?php
+// Definição de uma função anônima
 $dizimo = function($valor){
     return $valor * 0.1;
 };
