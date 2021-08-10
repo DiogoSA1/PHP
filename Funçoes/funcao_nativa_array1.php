@@ -1,5 +1,5 @@
 <?php
-
+// Manipulando arrays com funções nativas parte 02
 $numeros = [25, 32, 44, 19, 27, 42];
 $nomes = ['Diogo', 'Silva', 'Albuquerque'];
 
