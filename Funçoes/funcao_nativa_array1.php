@@ -24,19 +24,23 @@ echo $posicao."<br/>";
 
 // sort() => organiza os items do array em ordem crescente
 sort($numeros);
-echo print_r($numeros)."<br/>";
+print_r($numeros);
+echo "<hr>";
 
 // sort() => organiza os items do array em ordem decrescente
 rsort($numeros);
-echo print_r($numeros)."<br/>";
+print_r($numeros);
+echo "<hr>";
 
 // sort() => organiza os items do array em ordem crescente mantendo as referências da chave
 asort($numeros);
-echo print_r($numeros)."<br/>";
+print_r($numeros);
+echo "<hr>";
 
 // sort() => organiza os items do array em ordem decrescente mantendo as referências da chave
 arsort($numeros);
-echo print_r($numeros)."<br/>";
+print_r($numeros);
+echo "<hr>";
 
 // implode() => Realiza a união de elementos de um array
 $juntarNomes = implode(' ', $nomes);
