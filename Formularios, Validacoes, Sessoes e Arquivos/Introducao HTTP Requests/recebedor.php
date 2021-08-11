@@ -14,6 +14,17 @@ $senha = filter_input(INPUT_POST, 'senha');
 
 if ($nome && $idade && $senha && $email) {
 
+    // setcookie() => define um cookie para ser enviado para cabeçalhos HTTP.
+    // deve ser enviado antes de qualquer saida na tela.
+    // para acessar o cookie use o array $_COOKIE[]
+
+    // time() => função que retorna o tempo em milissegundos
+    // 86400 => qtd de milisegundos existentes em um dia
+    // 30 => qtd de dias
+    // $expiração => variavel que ira determinar a validade do cookie
+    $expiracao = time() + (86400 * 30);
+    setcookie('nome', $nome, $expiracao);
+
     echo 'Nome: '.$nome."<br/>";
     echo 'Email: '.$email."<br/>";
     echo 'Idade: '.$idade;

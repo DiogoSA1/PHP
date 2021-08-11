@@ -4,9 +4,10 @@ session_start();
 
 require('header.php');
 
-if ($_SESSION){
+// Exibe a mensagem da sessão se ela existir e em seguida apaga a mesma ao recarregar o navegador
+if ($_SESSION['aviso']){
     echo $_SESSION['aviso'];
-    echo $_SESSION['aviso'] = '';
+    $_SESSION['aviso'] = '';
 }
 ?>
 
@@ -18,6 +19,8 @@ perceber e visulizar os dados na sua url -->
 
 <!-- Substituindo POST por GET (metodo padrão) o usuario consegue visualizar os dados que estão sendo enviados na sua prória url -->
 
+<!-- na linha abaixo sera criado um link de referencia para apagar o cookie -->
+<a href = "apagar.php">Apagar Cookie</a>
 
 <form method="POST" action="recebedor.php">
     <label>
