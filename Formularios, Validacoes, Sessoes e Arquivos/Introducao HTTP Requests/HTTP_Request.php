@@ -19,6 +19,14 @@ perceber e visulizar os dados na sua url -->
     </label>
     <br>
     <br>
+    
+    <label>
+        Email:
+        <br>
+        <input type="text" name="email"/>
+    </label>
+    <br>
+    <br>
 
     <label>
         Idade:
