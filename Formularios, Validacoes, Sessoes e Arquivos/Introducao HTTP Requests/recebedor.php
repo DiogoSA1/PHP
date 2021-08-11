@@ -1,4 +1,6 @@
 <?php
+// session_start() => cria ou recarrega uma sessão passada via GET ou POST, ou passada via cookie
+session_start();
 
 // filter_input() => realiza o filtro de uma variavel externa, com base nos parametros atribuidos a função
 // FILTER_VALIDATE_EMAIL valida se o endereço é valido
@@ -17,6 +19,9 @@ if ($nome && $idade && $senha && $email) {
     echo 'Idade: '.$idade;
 
 } else {
+
+    // $_SESSION[] = Array que armazena dados para exibição de mensagens dentro de sessões.
+    $_SESSION['aviso'] = 'Preencha os itens corretamente';
 
     //header() => redireciona para o cabeçalho de um caminho especificado no parametro da função
     header('location: HTTP_Request.php');

@@ -1,5 +1,13 @@
 <?php
+// session_start() => cria uma sessão ou resume a sessão atual baseado em um id de sessão passado via GET ou POST, ou passado via cookie
+session_start();
+
 require('header.php');
+
+if ($_SESSION){
+    echo $_SESSION['aviso'];
+    echo $_SESSION['aviso'] = '';
+}
 ?>
 
 <!-- A seguir é criado e exibido um formulário cujo função é recolher alguns dados do usuario
