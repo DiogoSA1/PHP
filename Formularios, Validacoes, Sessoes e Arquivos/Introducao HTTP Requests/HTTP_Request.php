@@ -5,7 +5,7 @@ session_start();
 require('header.php');
 
 // Exibe a mensagem da sessão se ela existir e em seguida apaga a mesma ao recarregar o navegador
-if ($_SESSION['aviso']){
+if (isset($_SESSION['aviso'])){
     echo $_SESSION['aviso'];
     $_SESSION['aviso'] = '';
 }
