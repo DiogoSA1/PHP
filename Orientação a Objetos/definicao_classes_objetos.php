@@ -8,9 +8,33 @@
 
 // Variáveis membros de uma classe são chamadas "propriedades". Pode-se também observar serem referidas utilizando outros termos como "atributos" ou "campos", mas para o propósito desta referência, usaremos "propriedades". São definidas usando uma das palavras-chave public, protected, or private, seguidas de uma declaração normal de variável. Esta declaração pode incluir sua inicialização, porém esta inicialização deve ser um valor constante--isso é, deve ser possível avaliá-lo em tempo de compilação e não deve-se depender de informações de tempo de execução.
 class Post {
-    // public => declaração de propriedade
+    // public => declaração de propriedade publica
     public $likes = 0;
-    public $comments = [];
-    public $author;
+    // public => declaração de propriedade privada
+    private $comments = [];
+    // public => declaração de propriedade protegida
+    protected $author;
+
+    //Criando método publico
+    public function aumentarLike() {
+        $this -> likes++;
+    }
+
 }
+
+// Para criar uma instância de uma classe, a instrução new deve ser utilizada. Um objeto sempre será criado a não ser que a classe tenha um construtor definido que dispare uma exceção em caso de erro. Classes devem ser definidas antes de instanciadas (e em alguns casos isso é obrigatório).
+
+// new => criação de novo objeto
+$post1 = new Post();
+$post1->aumentarLike();
+$post1->aumentarLike();
+
+// new => criação de novo objeto
+$post2 = new Post();
+$post2->aumentarLike();
+
+echo "POST 1: ".$post1 -> likes."</br>";
+echo "POST 2: ".$post2 -> likes."</br>";
+
+
 
