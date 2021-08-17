@@ -9,11 +9,11 @@
 // Variáveis membros de uma classe são chamadas "propriedades". Pode-se também observar serem referidas utilizando outros termos como "atributos" ou "campos", mas para o propósito desta referência, usaremos "propriedades". São definidas usando uma das palavras-chave public, protected, or private, seguidas de uma declaração normal de variável. Esta declaração pode incluir sua inicialização, porém esta inicialização deve ser um valor constante--isso é, deve ser possível avaliá-lo em tempo de compilação e não deve-se depender de informações de tempo de execução.
 class Post {
     // public => declaração de propriedade publica
-    public $likes = 0;
+    public int $likes = 0;
     // public => declaração de propriedade privada
-    private $comments = [];
+    private  array $comments = [];
     // public => declaração de propriedade protegida
-    protected $author;
+    protected string $author;
 
     //Criando método publico
     public function aumentarLike() {
