@@ -11,9 +11,14 @@ class Post {
     // public => declaração de propriedade publica
     public int $likes = 0;
     // public => declaração de propriedade privada
-    private  array $comments = [];
+    public  array $comments = [];
     // public => declaração de propriedade protegida
-    protected string $author;
+    public string $author;
+
+
+    public function __construct($qtdlikes = 0) {
+        $this->likes = $qtdlikes;
+    }
 
     //Criando método publico
     public function aumentarLike() {
@@ -25,13 +30,11 @@ class Post {
 // Para criar uma instância de uma classe, a instrução new deve ser utilizada. Um objeto sempre será criado a não ser que a classe tenha um construtor definido que dispare uma exceção em caso de erro. Classes devem ser definidas antes de instanciadas (e em alguns casos isso é obrigatório).
 
 // new => criação de novo objeto
-$post1 = new Post();
-$post1->aumentarLike();
-$post1->aumentarLike();
+$post1 = new Post(25);
 
 // new => criação de novo objeto
-$post2 = new Post();
-$post2->aumentarLike();
+$post2 = new Post(0);
+
 
 echo "POST 1: ".$post1 -> likes."</br>";
 echo "POST 2: ".$post2 -> likes."</br>";
