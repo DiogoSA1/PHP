@@ -1,42 +1,43 @@
 <?php 
 
-
+// class define os atributos e métodos comuns que serão compartilhados por um objeto.
 class Post {
-    // public => declaração de propriedade publica
+    // ATRIBUTOS
+    // atributo publico => qualquer objeto fora da classe tera acesso.
     public int $likes = 0;
-    // public => declaração de propriedade privada
-    public  array $comments = [];
-    // public => declaração de propriedade protegida
-    private string $author;
+    // atributo privado => somente é visivel dentro da classe.
+    private array $comments = [];
+    // atributo protegido => atributo somente visivel para quem for da familia, ou seja filhos.
+    protected string $author;
 
-
-   
+    // MÉTODOS
+    // método publico
     public function aumentarLike() {
         $this -> likes++;
     }
-
-    public function setAuthor($n) {
+    // método privado
+    private function setAuthor($n) {
         if(strlen($n) >= 3) {
             $this->author = ucfirst($n);
         }
     }
-    public function getAuthor() {
+    //método protegido
+    protected function getAuthor() {
         return $this->author ??'Visitante';
     }
 
 }
 
-// Para criar uma instância de uma classe, a instrução new deve ser utilizada. Um objeto sempre será criado a não ser que a classe tenha um construtor definido que dispare uma exceção em caso de erro. Classes devem ser definidas antes de instanciadas (e em alguns casos isso é obrigatório).
-
-// new => criação de novo objeto
+// INSTANCIAMENTO DE UM OBJETO COM NEW
+// novo objeto $post1 criado a partir da classe Post
 $post1 = new Post();
-$post1->setAuthor('pi');
-// new => criação de novo objeto
+// atributo likes recebe valor 1 
+$post1->likes = 5;
+// no objeto $post2 criado a partir da classe Post
 $post2 = new Post();
-$post2->setAuthor('Fulano');
+// atributo likes recebe valor 2
+$post2->likes = 10;
 
-echo "POST 1: ".$post1 -> getAuthor()."</br>";
-echo "POST 2: ".$post2 -> getAuthor()."</br>";
-
-
+echo "POST 1: ".$post1 -> likes."</br>";
+echo "POST 2: ".$post2 -> likes."</br>";
 
