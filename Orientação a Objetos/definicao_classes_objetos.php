@@ -41,3 +41,73 @@ $post2->likes = 10;
 echo "POST 1: ".$post1 -> likes."</br>";
 echo "POST 2: ".$post2 -> likes."</br>";
 
+// CURSO EM VIDEO
+
+// Nova classe Caneta
+class Caneta {
+    
+    // ATRIBUTOS
+    public $modelo;
+    public $cor;
+    private $ponta;
+    protected $carga;
+    protected $tampada;
+    
+    // MÉTODOS
+    public function rabiscar() {
+        if ($this->tampada == true){
+            echo " A caneta esta tampada... </br>";
+        } else {
+            echo "estou rabiscando... </br>";
+        }
+        
+    }
+    public function tampar() {
+        $this->tampada = true;
+    }
+    public function destampar() {
+        $this->tampada = false;
+        
+    }
+
+}
+
+// novo objeto $c1 criado a partir da classe Caneta
+$c1 = new Caneta;
+$c1->modelo = "BIC Cristal";
+$c1->cor = 'Azul';
+//$c1->ponta = 0.5;
+//$c1->tampada = true;
+
+$c1->tampar();
+$c1->rabiscar();
+echo "<pre>";
+print_r($c1);
+echo "</pre>";
+
+// MÉTODOS GETTERS E SETTERS
+class Controle {
+
+    public $cor;
+    private $peso;
+
+    public function getCor(){
+        return $this->cor;
+    }
+    public function setCor($c){
+        $this->cor = $c;
+    }
+    public function getPeso(){
+        return this->peso;
+    }
+    public function setPeso($p){
+        $this->peso = $p;
+    }
+}
+$controle = new Controle;
+$controle->setCor('Azul');
+$controle->setPeso(10);
+
+echo "<pre>";
+print_r($controle);
+echo "</pre>";
