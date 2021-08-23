@@ -111,3 +111,37 @@ $controle->setPeso(10);
 echo "<pre>";
 print_r($controle);
 echo "</pre>";
+
+// MÉTODO CONSTRUCTOR
+class Aula {
+    public $qtdAlunos;
+    public $qtdHoras;
+
+    public function getAlunos(){
+        return $this->qtdAlunos;
+    }
+    public function setAlunos($a){
+        $this->qtdAlunos = $a;
+    }
+    public function getHoras(){
+        return $this->qtdHoras;
+    }
+    public function setHoras($h){
+        $this->qtdHoras = $h;
+    }
+    // function __Construct 
+    public function __Construct($a, $h) {
+        $this->setAlunos($a);
+        $this->setHoras($h);
+    }
+}
+
+$aula = new Aula(25, 32);
+$aula1 = new Aula(10,26);
+// $aula->getAlunos=10;
+// $aula->getHoras=26;
+
+echo "<pre>";
+print_r($aula);
+print_r($aula1);
+echo "</pre>";
