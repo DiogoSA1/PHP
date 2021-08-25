@@ -116,6 +116,7 @@ echo "</pre>";
 class Aula {
     public $qtdAlunos;
     public $qtdHoras;
+    private $carteiras;
 
     public function getAlunos(){
         return $this->qtdAlunos;
@@ -129,19 +130,29 @@ class Aula {
     public function setHoras($h){
         $this->qtdHoras = $h;
     }
+    public function getCarteiras(){
+        return $this->carteiras;
+    }
+    public function setCarteiras($c){
+        $this->carteiras = $c;
+    }
+
     // function __Construct 
-    public function __Construct($a, $h) {
+    public function __Construct($a = 0, $h = 0 , $c = 0) {
         $this->setAlunos($a);
         $this->setHoras($h);
+        $this->setCarteiras($c);
     }
 }
 
-$aula = new Aula(25, 32);
+$aula = new Aula(25);
 $aula1 = new Aula(10,26);
+$aula2 = new Aula(32, 40, 32);
 // $aula->getAlunos=10;
 // $aula->getHoras=26;
 
 echo "<pre>";
 print_r($aula);
 print_r($aula1);
+print_r($aula2);
 echo "</pre>";
