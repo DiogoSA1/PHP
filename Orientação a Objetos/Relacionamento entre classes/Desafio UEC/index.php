@@ -1,8 +1,9 @@
 <?php
    require_once "Lutador.php";
+   require_once("Luta.php");
 
    $l = [];
-   $l[0] = new Lutador('Pretty Boy', "França",30, 1.75, 90.9, 11, 2, 1);
+   $l[0] = new Lutador('Pretty Boy', "França",30, 1.75, 68.9, 11, 2, 1);
    
    $l[1] = new Lutador("Putscript", "Brasil", 29, 1.68, 57.8, 14, 2, 3);
 
@@ -14,8 +15,9 @@
 
    $l[5] = new Lutador("Nerdaart", "EUA", 30, 1.81, 105.7, 12, 2, 4);
 
-  
-   $l[0]->apresentar();
-   echo "<br>";
+$UEC1 = new Luta();
+$UEC1->marcarLuta($l[2], $l[3]); 
+$UEC1->lutar();
+$l[2]->status();
   
    

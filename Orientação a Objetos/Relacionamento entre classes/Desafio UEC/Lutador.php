@@ -1,5 +1,7 @@
 <?php
 
+require_once("Luta.php");
+
 class Lutador {
     private $nome;
     private $nacionalidade;
@@ -11,41 +13,41 @@ class Lutador {
     private $derrotas;
     private $empates;
 
-    private function getNome(){
+    function getNome(){
         return $this->nome;
     }
-    private function setNome($no) {
+    function setNome($no) {
         $this->nome = $no;
     }
-    private function getNacionalidade(){
+    function getNacionalidade(){
         return $this->nacionalidade;
     }
-    private function setNacionalidade($na) {
+    function setNacionalidade($na) {
         $this->nacionalidade = $na;
     }
-    private function getIdade(){
+    function getIdade(){
         return $this->idade;
     }
-    private function setIdade($id) {
+    function setIdade($id) {
         $this->idade = $id;
     }
-    private function getAltura(){
+    function getAltura(){
         return $this->altura;
     }
-    private function setAltura($al) {
+    function setAltura($al) {
         $this->altura = $al;
     }
-    private function getPeso(){
+    function getPeso(){
         return $this->peso;
     }
-    private function setPeso($pe) {
+    function setPeso($pe) {
         $this->peso = $pe;
         $this->setCategoria();
     }
-    private function getCategoria(){
+    public function getCategoria(){
         return $this->categoria;
     }
-    private function setCategoria() {
+    function setCategoria() {
         if ($this->getPeso() < 52.2) {
             $this->categoria = "INVALIDO ";
         }else if ($this->getPeso() <= 70.3){
@@ -78,14 +80,14 @@ class Lutador {
     }
 
     public function apresentar(){
-        echo " Lutador: ".$this->getNome().", ";
-        echo " Origem: ".$this->getNacionalidade().", ";
-        echo " Idade: ".$this->getIdade()." anos, ";
-        echo " Altura: ".$this->getAltura()."m de Altura, ";
-        echo " Peso: ".$this->getPeso()."Kg, ";
-        echo " Ganhos: ".$this->getVitorias().", ";
-        echo " Perdas: ".$this->getDerrotas().", ";
-        echo " Empates: ".$this->getEmpates().", ";
+        echo " Lutador: ".$this->getNome().", <br>";
+        echo " Origem: ".$this->getNacionalidade().",  <br>";
+        echo " Idade: ".$this->getIdade()." anos,  <br>";
+        echo " Altura: ".$this->getAltura()."m de Altura,  <br>";
+        echo " Peso: ".$this->getPeso()."Kg,  <br>";
+        echo " Ganhos: ".$this->getVitorias().",  <br>";
+        echo " Perdas: ".$this->getDerrotas().",  <br>";
+        echo " Empates: ".$this->getEmpates().",  <br> <br>";
 
     }
     public function status(){
